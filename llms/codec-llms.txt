@@ -1,0 +1,20 @@
+# Codec
+
+> Codec (CODEC AI) is an AI-powered audience-intelligence consultancy that helps ambitious global brands identify, understand, and activate high-value cultural communities to accelerate growth. It operates as a B2B consultancy powered by a proprietary AI platform and does not publish a public API, SDKs, or developer documentation.
+
+## About
+- Marketing strategy: growth-community identification, competitor mapping, product and service innovation.
+- Brand and creative: brand development, creative ideation, content strategy.
+- Activation and measurement: influencer identification, community media targeting, cultural-impact measurement.
+- Backed by 500 Global; profiled in the API Evangelist network as a company (no API surface).
+
+## Links
+- [Website](https://codec.ai)
+- [Approach](https://codec.ai/approach)
+- [Insights](https://codec.ai/insights)
+- [Contact](https://codec.ai/contact)
+- [Privacy Policy](https://codec.ai/privacy)
+
+## Notes
+- No public API, OpenAPI/AsyncAPI spec, SDKs, CLI, MCP server, or developer portal was found (probed 2026-07-18).
+- /.well-known/security.txt, /openid-configuration, /oauth-authorization-server, /api-catalog, /ai-plugin.json and /llms.txt all returned 404.

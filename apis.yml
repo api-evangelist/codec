@@ -1,8 +1,26 @@
 aid: codec
 name: Codec
-description: Codec is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Codec (CODEC AI) is an AI-powered audience-intelligence consultancy that
+  helps ambitious global brands identify, understand, and activate high-value cultural
+  communities to accelerate growth. Its work spans marketing strategy, brand and creative,
+  and activation and measurement, powered by an award-winning proprietary AI platform,
+  with case studies for enterprise brands such as Stella Artois, Frank's RedHot, and
+  Moncler. Codec is a B2B consultancy rather than a developer-facing API provider —
+  it publishes no public API, SDKs, or developer documentation. It was surfaced as
+  a 500 Global portfolio company and added to the API Evangelist network for enrichment.
 url: https://raw.githubusercontent.com/api-evangelist/codec/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/65b296cf1c033f89b07ba342/65f48906d951be63c90d1342_open-graph.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +29,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Artificial Intelligence
+- Audience Intelligence
+- Marketing
+- Community
+- Brand Strategy
+- Consulting
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +47,18 @@ maintainers:
 common:
 - type: Website
   url: https://codec.ai
+- type: Blog
+  url: https://codec.ai/insights
+- type: Support
+  url: https://codec.ai/contact
+- type: PrivacyPolicy
+  url: https://codec.ai/privacy
+- type: DomainSecurity
+  url: security/codec-domain-security.yml
+- type: LLMsTxt
+  url: llms/codec-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
