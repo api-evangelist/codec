@@ -29,7 +29,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-13'
 tags:
 - Company
 - Artificial Intelligence
@@ -58,7 +58,33 @@ common:
 - type: LLMsTxt
   url: llms/codec-llms.txt
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 3
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: >-
+    Full contract-discovery pass re-run 2026-08-13 against every Codec host in DNS and
+    certificate transparency. No REST/OpenAPI, GraphQL, MCP, AsyncAPI, agent card, SDK,
+    or developer portal exists. Recorded the absences as data (well-known probe index,
+    plans, rate limits) rather than asserting surfaces Codec does not serve.
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Codec sells audience-intelligence consulting delivered through a proprietary internal
+    platform; its public presence is a seven-page Webflow marketing site with no developer,
+    docs, pricing or sign-up path, and the only non-www host that resolves (app.codec.ai,
+    the customer platform login) fails at the origin with a Cloudflare 525 SSL handshake
+    error, so there is no developer program to profile.
+  evidence:
+  - url: https://codec.ai/openapi.json
+    status: 404
+  - url: https://codec.ai/.well-known/api-catalog
+    status: 404
+  - url: https://app.codec.ai/
+    status: 525
+  - url: https://www.codec.ai/pricing
+    status: 404
+  - url: https://codec.ai/sitemap.xml
+    status: 200
+  checked: '2026-08-13'
