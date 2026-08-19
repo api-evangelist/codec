@@ -9,12 +9,22 @@
 - Backed by 500 Global; profiled in the API Evangelist network as a company (no API surface).
 
 ## Links
-- [Website](https://codec.ai)
-- [Approach](https://codec.ai/approach)
-- [Insights](https://codec.ai/insights)
-- [Contact](https://codec.ai/contact)
-- [Privacy Policy](https://codec.ai/privacy)
+- [Website](https://www.codec.ai)
+- [Approach](https://www.codec.ai/approach)
+- [Case Studies](https://www.codec.ai/work)
+- [Insights](https://www.codec.ai/insights)
+- [Contact](https://www.codec.ai/contact)
+- [Privacy Policy](https://www.codec.ai/privacy)
+
+## Artifacts
+- [Well-known probe](well-known/codec-well-known.yml) — recorded absence across every Codec host
+- [Domain security](security/codec-domain-security.yml) — TLS/HSTS/SPF/DMARC probe
+- [Plans and pricing](plans/codec-plans-pricing.yml) — no published plans
+- [Rate limits](rate-limits/codec-rate-limits.yml) — no published limits
 
 ## Notes
-- No public API, OpenAPI/AsyncAPI spec, SDKs, CLI, MCP server, or developer portal was found (probed 2026-07-18).
-- /.well-known/security.txt, /openid-configuration, /oauth-authorization-server, /api-catalog, /ai-plugin.json and /llms.txt all returned 404.
+- No public API, OpenAPI/Swagger spec, GraphQL endpoint, AsyncAPI/webhook surface, SDK, CLI, MCP server, A2A agent card, or developer portal was found. Re-probed 2026-08-13.
+- The public site is seven Webflow pages; https://codec.ai/sitemap.xml (HTTP 200) is the only machine-readable document Codec serves and it lists no developer or documentation path.
+- /.well-known/security.txt, /openid-configuration, /oauth-authorization-server, /api-catalog, /ai-plugin.json, /agent-card.json, /agent.json, /llms.txt, /openapi.json and /swagger.json all returned 404 on codec.ai.
+- Certificate transparency (crt.sh) surfaced four secondary hosts, none of which serves a working origin: app.codec.ai (Cloudflare 525, origin SSL handshake failure), blog.codec.ai (Cloudflare 1014), tools.codec.ai (TLS certificate host mismatch, connection refused), resources.codec.ai (404 on every path). There is no api./docs./developer./portal./mcp. host in DNS.
+- The npm package `codec-ai` is unrelated third-party software (a Chinese-language code-generation assistant published by an individual maintainer), not a Codec client library. No first-party package exists on npm, PyPI, RubyGems, crates.io, NuGet, Maven Central, or pkg.go.dev, and there is no `codec-ai` GitHub organization (HTTP 404).

@@ -1,0 +1,21 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.codec.ai/
+plan_count: 0
+currency: null
+plans: []
+note: >-
+  Codec publishes no plans, tiers, or pricing of any kind. The public site is seven
+  Webflow pages (home, approach, work, insights, contact, styles, privacy) and its
+  navigation carries no pricing, packages, or sign-up link; https://www.codec.ai/pricing
+  returns 404. Engagement is a consultancy sales conversation through
+  https://www.codec.ai/contact, so there is nothing published to record — an honest zero,
+  not an unchecked field. No Pricing pointer is emitted in apis.yml because no pricing
+  page exists to point at.
+evidence:
+- url: https://www.codec.ai/pricing
+  status: 404
+- url: https://www.codec.ai/contact
+  status: 200
+- url: https://www.codec.ai/
+  status: 200

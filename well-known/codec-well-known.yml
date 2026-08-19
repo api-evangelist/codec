@@ -1,0 +1,77 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTPS probes of every Codec host found in apis.yml, DNS, and certificate transparency (crt.sh)
+note: >-
+  Every /.well-known/ path probed on every reachable Codec host returned 404. No
+  document was served, so NO WellKnown or SecurityTxt pointer is emitted in apis.yml —
+  this file records a verified absence, not a presence. The secondary hosts
+  (app./blog./tools./resources.codec.ai) exist in DNS but do not serve a working
+  origin, so they could not be probed for documents at all.
+hosts:
+- host: https://codec.ai
+  reachable: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /sitemap.xml
+    status: 200
+    note: >-
+      The only machine-readable document Codec serves. Seven marketing URLs
+      (home, approach, contact, insights, styles, work, privacy) — no developer,
+      docs, or API path.
+- host: https://app.codec.ai
+  reachable: false
+  origin_error: 'Cloudflare 525 — SSL handshake failed with the origin server'
+  documents:
+  - path: /
+    status: 525
+  - path: /.well-known/agent-card.json
+    status: 525
+  - path: /.well-known/oauth-authorization-server
+    status: 525
+  - path: /openapi.json
+    status: 525
+- host: https://blog.codec.ai
+  reachable: false
+  origin_error: 'Cloudflare error 1014 — CNAME cross-user banned'
+  documents:
+  - path: /
+    status: 403
+  - path: /llms.txt
+    status: 403
+- host: https://tools.codec.ai
+  reachable: false
+  origin_error: 'TLS certificate does not match host; connection could not be established'
+  documents:
+  - path: /
+    status: null
+    note: connection failed before an HTTP status was returned
+- host: https://resources.codec.ai
+  reachable: true
+  documents:
+  - path: /
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 404

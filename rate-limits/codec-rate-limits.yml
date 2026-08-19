@@ -1,0 +1,18 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.codec.ai/
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No rate limits are documented because Codec publishes no API. Contract discovery on
+  2026-08-13 probed every Codec host in DNS and certificate transparency
+  (codec.ai, www., app., blog., tools., resources.) for REST/OpenAPI, GraphQL, MCP and
+  /.well-known/ surfaces and found none; there is no developer portal, reference, or
+  quota documentation to read limits from. Recorded as a verified zero. No RateLimits
+  pointer is emitted in apis.yml because no runtime rate-limit contract exists.
+evidence:
+- url: https://codec.ai/openapi.json
+  status: 404
+- url: https://codec.ai/.well-known/api-catalog
+  status: 404
